@@ -46,8 +46,9 @@ I live at 342 Relic Lane and I really wish we had a bike lane for my morning wor
 
 Infrastructure Maintenance:
 ```
-Estoy en la avenida Render y mi llanta explotó debido al bache en el carril izquierdo. (Google Translated from: i'm on render ave and my tire blew because of the pothole in the left lane)
+Estoy en la avenida Render y mi llanta explotó debido al bache en el carril izquierdo.
 ```
+(Google Translated from: "i'm on render ave and my tire blew because of the pothole in the left lane")
 
 ```
 yo what's up with all these potholes on Auburn ave?
@@ -66,6 +67,7 @@ A tree has fallen on 75 north near exit 260!
 - Public Safety Concerns
 
 ## Examples of service requests for each category
+
 1. **Infrastructure Installation:**
    - Request for new sidewalks or crosswalks
    - Requests for new streetlights
@@ -76,13 +78,10 @@ A tree has fallen on 75 north near exit 260!
    - Potholes and road damage
    - Damaged or missing road signs
    - Blocked or damaged sidewalks
-   - Flooding or drainage problems
-   - Street Cleaning
 
 1. **Public Safety Concerns:**
    - Graffiti and vandalism
    - Illegal dumping or littering
-   - Suspicious activities or loitering
    - Unsafe playground equipment
    - Overgrown vegetation obstructing visibility
 
@@ -94,6 +93,7 @@ A tree has fallen on 75 north near exit 260!
 - A site where users can see popular and/or recent requests.
   - Ensure AI can identify new requests that are similar to others and let officials know in analytics
 
+
 # Legal
 
 ## License
@@ -101,7 +101,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Attribution
 The CityPulse ATL logo was generated with the assistance of GPT-4 and Microsoft Designer.
-Some CSS code in this project was generated with the assistance of GPT-3, developed by OpenAI. 
+Some HTML/CSS code in this project was generated with the assistance of GPT-3, developed by OpenAI.
+Example suggestions for service categories was generated with the assistance of GPT-3, developed by OpenAI. 
 
 ## Contact
 For any queries, you can contact the developer, Mikaila Ridley.
