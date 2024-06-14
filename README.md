@@ -6,6 +6,9 @@ knowledge, accessibility, and bureaucracy.
 # Demo
 https://youtu.be/vyJQNnBq230
 
+# Pitch deck
+https://docs.google.com/presentation/d/1ZsGu14eIb4o9jRbsEvSH9I7RQb1G6kMIX5qDEgODpBg/edit?usp=sharing
+
 # Tech Stack
 - Language: Python 3
 - Framework: Flask
