@@ -1,10 +1,17 @@
+# What is CityPulse ATL?
+CityPulse ATL is a pioneering initiative designed to bridge the gap between the people of Atlanta and their public officials. 
+Our mission is simple yet profound: to empower individuals to report the needs of their city without the traditional barriers of
+knowledge, accessibility, and bureaucracy.
 
 # Tech Stack
-- Python, Flask
-- OpenAI (model: gpt-3.5-turbo)
-- New Relic
+- Language: Python 3
+- Framework: Flask
+- API: OpenAI API (model: gpt-3.5-turbo)
+- Observability: New Relic
 
 # Run CityPulse ATL
+The CityPulse application exists within a docker container to ensure a consistent environment when running and because NewRelic required a Linux environment when using Flask.
+
 config.py is not in source-control because it serves as a configuration file that contains the OpenAI API key.
 
 To run locally, you will need to create this file and set OPENAI_API_KEY to your OpenAI API Key
@@ -17,7 +24,7 @@ To run locally, you will need to create this file and set OPENAI_API_KEY to your
 OPENAI_API_KEY = 'YOUR_KEY_HERE'
 ```
 
-Then, you can run the application locally:
+Then, you can run the application locally, making sure to specify your New Relic license key:
 ```
 docker build --build-arg NEW_RELIC_LICENSE_KEY='YOUR_LICENSE_KEY' -t citypulse-app .
 
@@ -34,6 +41,10 @@ I live at 342 Relic Lane and I really wish we had a bike lane for my morning wor
 Infrastructure Maintenance:
 ```
 Estoy en la avenida Render y mi llanta explotó debido al bache en el carril izquierdo. (Google Translated from: i'm on render ave and my tire blew because of the pothole in the left lane)
+```
+
+```
+yo what's up with all these potholes on Auburn ave?
 ```
 
 Public Safety:
