@@ -1,72 +1,78 @@
-# InnovateATL Hackathon
 
-Welcome to the InnovateATL Hackathon! This event aims to bring together talented engineers, public sector experts, and the local tech community to develop innovative solutions for Atlanta's most pressing public sector challenges.
+# Tech Stack
+- Python, Flask
+- OpenAI (model: gpt-3.5-turbo)
+- New Relic
 
-## Objectives
+# Run CityPulse ATL
+config.py is not in source-control because it serves as a configuration file that contains the OpenAI API key.
 
-- **Harness Cutting-Edge AI:** Utilize state-of-the-art LLMs to build creative solutions addressing Atlanta's pressing issues.
-- **Public Sector Collaboration:** Foster collaboration between engineers and public sector experts for impactful, practical solutions.
-- **Community Engagement:** Engage the local tech community to support public welfare through technology.
-- **Solution Implementation:** Develop practical prototypes that can be piloted and implemented by the city's departments.
+To run locally, you will need to create this file and set OPENAI_API_KEY to your OpenAI API Key
 
-## Problem Statements
+```
+# Configuration file
+# Ensure that this file is included in .gitignore
 
-Participants can choose from one of the following key challenges or propose their own issue related to the public sector in Atlanta:
+# Development API token
+OPENAI_API_KEY = 'YOUR_KEY_HERE'
+```
 
-### Improving Public Transportation
-**Problem:** Enhance communication and service accessibility for MARTA (Metropolitan Atlanta Rapid Transit Authority).
-- **Solution Examples:** AI-powered chatbots for real-time customer support, natural language-based trip planning, and feedback systems.
+Then, you can run the application locally:
+```
+docker build --build-arg NEW_RELIC_LICENSE_KEY='YOUR_LICENSE_KEY' -t citypulse-app .
 
-### Enhancing Emergency Services Communication
-**Problem:** Optimize communication between emergency responders and the public.
-- **Solution Examples:** LLM-driven public alerts system, predictive emergency response models using public data, and advanced disaster communication platforms.
+docker run -p 5000:5000 citypulse-app
+```
 
-### Streamlining City Administration
-**Problem:** Improve citizen engagement and streamline administrative processes.
-- **Solution Examples:** Automated FAQs and chatbot assistants for city departments, paperwork simplification using NLP, and real-time feedback mechanisms.
+# Usage
+## Example prompts to try
+Infrastructure Installation:
+```
+I live at 342 Relic Lane and I really wish we had a bike lane for my morning workout
+```
 
-### Facilitating Homeless Support Services
-**Problem:** Coordinate support services for the homeless population.
-- **Solution Examples:** NLP-enabled data collection for service needs, automated resource directories, and LLM-assisted case management.
+Infrastructure Maintenance:
+```
+Estoy en la avenida Render y mi llanta explotó debido al bache en el carril izquierdo. (Google Translated from: i'm on render ave and my tire blew because of the pothole in the left lane)
+```
 
-### Promoting Transparency in Local Governance
-**Problem:** Enhance transparency and citizen participation in local government decisions.
-- **Solution Examples:** NLP-based analysis of public documents, citizen-friendly government portals, and automated policy brief generation.
+Public Safety:
+```
+A tree has fallen on 75 north near exit 260!
+```
 
-## Example Project
+# Supported Hackathon User Cases
 
-### 311+
-Users can take a photo of a car break-in incident, and the tool automatically inputs a 311 report, using metadata from the photo to identify the location and time. "311+" fills out the necessary form, making it easier for victims to report incidents quickly and accurately.
+## Categories 
+- Infrastructure Installation
+- Infrastructure Repair
+- Public Safety Concerns
 
-## Guidelines
+## Examples of service requests for each category
+1. **Infrastructure Installation:**
+   - Request for new sidewalks or crosswalks
+   - Requests for new streetlights
+   - Request for public facilities (e.g., benches, waste bins)
 
-- **Team Size:** 3-5 members per team
+1. **Infrastructure Maintenance or Repairs:**
+   - Broken streetlights
+   - Potholes and road damage
+   - Damaged or missing road signs
+   - Blocked or damaged sidewalks
+   - Flooding or drainage problems
+   - Street Cleaning
 
-### Technology
+1. **Public Safety Concerns:**
+   - Graffiti and vandalism
+   - Illegal dumping or littering
+   - Suspicious activities or loitering
+   - Unsafe playground equipment
+   - Overgrown vegetation obstructing visibility
 
-- **Preferred LLMs:** GPT-4, GPT-3, LLaMA, Claude, etc.
-- **Other Technologies:** NLP frameworks, machine learning libraries, and relevant public datasets
-
-### Submission Requirements
-
-- **Source Code Repository**
-- **Technical Documentation**
-- **Solution Presentation (10-minute pitch)**
-- **Demo Video (max. 3 minutes)**
-
-### Evaluation Criteria
-
-- **Relevance (20%):** How well does the solution address the identified public sector challenge?
-- **Innovation (20%):** Is the solution novel and creative in its approach?
-- **Technical Implementation (20%):** Quality of code, design, and technical documentation.
-- **Scalability (20%):** Potential for implementation across multiple departments/organizations.
-- **User Experience (20%):** How intuitive and user-friendly is the solution?
-
-## Prizes
-
-- **First Place:** $7,000
-- **Second Place:** $3,000
-- **Third Place:** $1,000
-
-For official rules click [here](rules.pdf).
-We are excited to see your innovative solutions and how they can help transform Atlanta's public sector! Happy hacking!
+# Future Work and Opportunities:
+- Route requests to database and to a specific department
+- Add support for phone calls by using OpenAI's translate and transcribe endpoints
+- Extend categories to fit needs of City of Atlanta.
+- Expand to metro Atlanta (Marietta, Dunwoody, etc)
+- A site where users can see popular and/or recent requests.
+  - Ensure AI can identify new requests that are similar to others and let officials know in analytics
