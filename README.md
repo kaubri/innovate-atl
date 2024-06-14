@@ -93,3 +93,15 @@ A tree has fallen on 75 north near exit 260!
 - Expand to metro Atlanta (Marietta, Dunwoody, etc)
 - A site where users can see popular and/or recent requests.
   - Ensure AI can identify new requests that are similar to others and let officials know in analytics
+
+# Legal
+
+## License
+This project is licensed under the CityPulse ATL License. See the [LICENSE](LICENSE) file for details.
+
+## Attribution
+The CityPulse ATL logo was generated with the assistance of GPT-4 and Microsoft Designer.
+Some CSS code in this project was generated with the assistance of GPT-3, developed by OpenAI. 
+
+## Contact
+For any queries, you can contact the developer, Mikaila Ridley.
